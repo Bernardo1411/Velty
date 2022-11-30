@@ -1,0 +1,12 @@
+.container-div_pillField {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 61px;
+
+    background-color: var(--white);
+    box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+    border-radius: 30px;
+}
