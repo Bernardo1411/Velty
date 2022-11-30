@@ -3,8 +3,14 @@
   --white: #FFFFFF;
 }
 
+@font-face {
+  font-family: DMSans-Regular;
+  src: url('./assets/fonts/DM_Sans/DMSans-Regular.ttf');
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'DMSans-Regular';
   margin: 0;
 }
 
