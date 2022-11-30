@@ -3,6 +3,8 @@ import './Dashboard.css';
 
 import PillField from '../../components/molecules/pillField/PillField';
 import Input from '../../components/atoms/inputs/Input';
+import CardColor from '../../components/molecules/cardColor/CardColor';
+import WhiteCard from '../../components/molecules/whiteCards/WhiteCard';
 
 function Dashboard() {
   return (
@@ -72,7 +74,30 @@ function Dashboard() {
           </PillField>
         </div>
       </div>
-      <div className="body-div_dashboard" />
+      <div className="body-div_dashboard">
+        <CardColor
+          total="312.321,00"
+          totalTitle="Receita Total"
+          average="67,20"
+          color="colorRed"
+        />
+        <CardColor
+          total="74.421,00"
+          totalTitle="Lucro Total"
+          average="42,30"
+          color="colorBlue"
+        />
+        <CardColor
+          total="3,12"
+          totalTitle="Lucro por venda"
+          average="12,40"
+          color="colorGreen"
+        />
+        <WhiteCard
+          title="Planos"
+          subTitle="123 planos ativos"
+        />
+      </div>
     </div>
   );
 }
