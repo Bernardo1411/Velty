@@ -1,0 +1,16 @@
+.randomPage {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+.randomPage h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--deep-blue);
+}
