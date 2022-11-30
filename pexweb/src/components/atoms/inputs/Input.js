@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './Input.css';
 
 function Input(props) {
   const { image, type, placeholder } = props;
+
+  const [typeState, setTypeState] = useState('text');
+
   return (
     <div className="container-div_input">
       <img
@@ -14,11 +17,23 @@ function Input(props) {
         width="12px"
         height="12px"
       />
-      <input
-        className="input-input_input"
-        type={type}
-        placeholder={placeholder}
-      />
+      {
+      type === 'date' ? (
+        <input
+          className="input-input_input"
+          type={typeState}
+          onFocus={() => setTypeState('date')}
+          onBlur={() => setTypeState('text')}
+          placeholder={placeholder}
+        />
+      ) : (
+        <input
+          className="input-input_input"
+          type={type}
+          placeholder={placeholder}
+        />
+      )
+      }
     </div>
   );
 }

@@ -1,0 +1,35 @@
+.container-div_verysmallcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    border-radius: 20px;
+    background: var(--white);
+    color: var(--deep-blue);
+
+    width: 249px;
+    height: 95px;
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    padding: 10px 0px 10px 20px;
+}
+
+.container-div_verysmallcard h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.container-div_verysmallcard h3 {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #A3AED0;
+}
+
+.container-div_verysmallcard p {
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--light-green);
+}

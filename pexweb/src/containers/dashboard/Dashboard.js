@@ -5,6 +5,8 @@ import PillField from '../../components/molecules/pillField/PillField';
 import Input from '../../components/atoms/inputs/Input';
 import CardColor from '../../components/molecules/cardColor/CardColor';
 import WhiteCard from '../../components/molecules/whiteCards/WhiteCard';
+import SmallCard from '../../components/molecules/smallCard/SmallCard';
+import VerySmallCard from '../../components/molecules/verySmallCard/VerySmallCard';
 
 function Dashboard() {
   return (
@@ -16,8 +18,8 @@ function Dashboard() {
             <h1 className="title-h1_dashboard">Velty Dashboard</h1>
           </div>
           <PillField
-            width="33.5vw"
-            minWidth="434.7px"
+            width="90%"
+            minWidth="405px"
           >
             <p className="text-p_PillField">Filtrar por data</p>
             <Input
@@ -34,7 +36,7 @@ function Dashboard() {
         </div>
         <div className="rightHeader-div_dashboard">
           <PillField
-            width="22vw"
+            width="70%"
             minWidth="285px"
           >
             <Input
@@ -75,28 +77,160 @@ function Dashboard() {
         </div>
       </div>
       <div className="body-div_dashboard">
-        <CardColor
-          total="312.321,00"
-          totalTitle="Receita Total"
-          average="67,20"
-          color="colorRed"
-        />
-        <CardColor
-          total="74.421,00"
-          totalTitle="Lucro Total"
-          average="42,30"
-          color="colorBlue"
-        />
-        <CardColor
-          total="3,12"
-          totalTitle="Lucro por venda"
-          average="12,40"
-          color="colorGreen"
-        />
-        <WhiteCard
-          title="Planos"
-          subTitle="123 planos ativos"
-        />
+        <div>
+          <CardColor
+            total="312.321,00"
+            totalTitle="Receita Total"
+            average="67,20"
+            color="colorRed"
+          />
+          <CardColor
+            total="74.421,00"
+            totalTitle="Lucro Total"
+            average="42,30"
+            color="colorBlue"
+          />
+          <CardColor
+            total="3,12"
+            totalTitle="Lucro por venda"
+            average="12,40"
+            color="colorGreen"
+          />
+        </div>
+        <div>
+          <VerySmallCard
+            total="3.312"
+            totalTitle="Clientes ativos"
+            percentBalance="+15,3% (+223)"
+          />
+          <VerySmallCard
+            total="3.312"
+            totalTitle="Novos clientes"
+            percentBalance="+15,3% (+223)"
+          />
+          <VerySmallCard
+            total="3.312"
+            totalTitle="Clientes adicionados"
+            percentBalance="+15,3% (+223)"
+          />
+          <VerySmallCard
+            total="3.312"
+            totalTitle="LTV"
+            percentBalance="+15,3% (+223)"
+          />
+          <VerySmallCard
+            total="3.312"
+            totalTitle="Turnover"
+            percentBalance="+15,3% (+223)"
+          />
+          <VerySmallCard
+            total="3.312"
+            totalTitle="Turnover recuperado"
+            percentBalance="+15,3% (+223)"
+          />
+        </div>
+        <div>
+          <SmallCard
+            total="321.321"
+            totalTitle="Cotações realizadas"
+            percentBalance="+15,3% (+223)"
+          />
+          <SmallCard
+            total="321.321"
+            totalTitle="Vendas finalizadas"
+            percentBalance="+15,3% (+223)"
+          />
+          <SmallCard
+            total="321.321"
+            totalTitle="Cotações concluídas"
+            percentBalance="+15,3% (+223)"
+          />
+          <SmallCard
+            total="321.321"
+            totalTitle="Cotações não respondidas"
+            percentBalance="+15,3% (+223)"
+          />
+        </div>
+        <div>
+          <WhiteCard
+            title="Planos"
+            subTitle="123 planos ativos"
+            list={[
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+            ]}
+          />
+          <WhiteCard
+            title="Categorias"
+            subTitle="4 categorias em uso"
+            list={[
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+            ]}
+          />
+          <WhiteCard
+            title="Tipos de planos"
+            subTitle="2 tipos em uso"
+            list={[
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+              {
+                clube: 'Estagiários',
+                clientes: '312',
+                preco: '123,90',
+              },
+            ]}
+          />
+        </div>
       </div>
     </div>
   );

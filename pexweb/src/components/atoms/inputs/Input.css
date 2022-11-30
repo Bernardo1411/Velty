@@ -18,6 +18,10 @@
     background-color: rgba(0, 0, 0, 0);
     border: none;
     outline: none;
+
+    color:var(--deep-blue);
+    font-size: 0.85rem;
+    font-weight: 400;
 }
 
 .input-input_input::placeholder {

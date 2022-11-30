@@ -17,12 +17,14 @@
   box-sizing: border-box;
   font-family: 'DMSans-Regular';
   margin: 0;
+  padding: 0;
 }
 
 html {
   width: 100vw;
   min-height: 100vh;
   height: auto;
+  overflow-x: hidden;
 }
 
 body {
