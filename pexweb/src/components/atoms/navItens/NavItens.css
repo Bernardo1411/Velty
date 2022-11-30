@@ -6,8 +6,6 @@
 
     width: 100%;
     height: 60px;
-
-    margin-left: 20px;
 }
 
 .logo-span_navitens {
@@ -35,6 +33,6 @@
     color: #A3AED0;
 }
 
-.navitens a:active {
-    border-right: 2px solid var(--blue);
+.active{
+    border-right: 5px solid var(--blue);
 }

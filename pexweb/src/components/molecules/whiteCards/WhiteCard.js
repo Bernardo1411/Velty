@@ -12,7 +12,7 @@ function WhiteCard(props) {
       <div
         className="header-div_whitecard"
       >
-        <h2>{`R$ ${title}`}</h2>
+        <h2>{`${title}`}</h2>
         <h3>{`R$ ${subTitle}`}</h3>
       </div>
       <div className="footer-div_whitecard">

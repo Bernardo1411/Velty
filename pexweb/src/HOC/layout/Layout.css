@@ -4,3 +4,30 @@
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 750px) {
+    .navbar {
+        transform: translate(-280px);
+        transition: transform 0.5s;
+    }
+
+    .navbar:hover {
+        transform: translate(0px);
+        transition: transform 0.5s;
+    }
+
+    .App {
+        padding-left: 0;
+        transition: padding-left 0.5s;
+    }
+
+    .body-div_dashboard > div {
+        justify-content: center;
+        transition: justify-content 0.5s;
+    }
+
+    .leftHeader-div_dashboard {
+        align-items: center;
+        transition: align-items 0.5s;
+    }
+}

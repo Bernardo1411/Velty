@@ -7,6 +7,9 @@ import CardColor from '../../components/molecules/cardColor/CardColor';
 import WhiteCard from '../../components/molecules/whiteCards/WhiteCard';
 import SmallCard from '../../components/molecules/smallCard/SmallCard';
 import VerySmallCard from '../../components/molecules/verySmallCard/VerySmallCard';
+import { ReactComponent as BellSVG } from '../../assets/images/bell.svg';
+import { ReactComponent as MoonSVG } from '../../assets/images/moon.svg';
+import { ReactComponent as InfoSVG } from '../../assets/images/info.svg';
 
 function Dashboard() {
   return (
@@ -43,26 +46,17 @@ function Dashboard() {
               image="search"
               placeholder="Busca"
             />
-            <img
-      // eslint-disable-next-line global-require
-              src={require('../../assets/images/bell.png')}
-              alt="logo for notification"
-              width="12px"
-              height="12px"
+            <BellSVG
+              width="15px"
+              height="19px"
             />
-            <img
-      // eslint-disable-next-line global-require
-              src={require('../../assets/images/moon.png')}
-              alt="logo for mode"
-              width="12px"
-              height="12px"
+            <MoonSVG
+              width="16px"
+              height="18px"
             />
-            <img
-      // eslint-disable-next-line global-require
-              src={require('../../assets/images/inter.png')}
-              alt="logo for infomation"
-              width="12px"
-              height="12px"
+            <InfoSVG
+              width="20px"
+              height="20px"
             />
             <div className="image-div_PillField">
               <img

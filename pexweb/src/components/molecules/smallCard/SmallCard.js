@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import './SmallCard.css';
 
+import { ReactComponent as MoneySVG } from '../../../assets/images/money.svg';
+
 function SmallCard(props) {
   const {
     total, percentBalance, totalTitle,
@@ -12,10 +14,7 @@ function SmallCard(props) {
     <div
       className="container-div_smallcard"
     >
-      <img
-      // eslint-disable-next-line global-require
-        src={require('../../../assets/images/colorBlue.png')}
-        alt="logo for date input"
+      <MoneySVG
         width="56px"
         height="56px"
       />

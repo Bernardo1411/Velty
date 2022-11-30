@@ -17,24 +17,29 @@ function NavBar() {
       <nav>
         <ul>
           <NavItens
+            link="/"
             logo={(
               <HomeSVG />
 )}
             title="Dashboard"
           />
           <NavItens
+            link="/vendas"
             logo={<CartSVG />}
             title="Vendas"
           />
           <NavItens
+            link="/relatorios"
             logo={<SheetsSVG />}
             title="Relatórios"
           />
           <NavItens
+            link="/lojas"
             logo={<PartnerSVG />}
             title="Lojas parceiras"
           />
           <NavItens
+            link="clientes"
             logo={<ClienteSVG />}
             title="Clientes"
           />
