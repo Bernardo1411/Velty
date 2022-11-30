@@ -1,0 +1,25 @@
+.container-div_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 33.2%;
+    min-width: 144.45px;
+    height: 67%;
+
+    background-color: var(--light-blue);
+    border-radius: 49px;
+    padding-left: 2%;
+}
+
+.input-input_input {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
+.input-input_input::placeholder {
+    color: #8F9BBA;
+}

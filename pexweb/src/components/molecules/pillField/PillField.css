@@ -1,10 +1,11 @@
 .container-div_pillField {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
 
-    height: 61px;
+    height: 8vh;
+    min-height: 35px;
 
     background-color: var(--white);
     box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);

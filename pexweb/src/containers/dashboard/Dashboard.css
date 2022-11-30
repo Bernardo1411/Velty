@@ -6,4 +6,53 @@
   
     width: 100vw;
     height: 100%;
+
+    margin-top: 20px;
+  }
+
+  .header-div_dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    height: 150px;
+    width: 100%;
+  }
+
+  .leftHeader-div_dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+  }
+
+  .rightHeader-div_dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 50%;
+  }
+
+  .text-p_PillField {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--medium-blue)
+  }
+
+  .title-h1_dashboard {
+    color: var(--deep-blue);
+  }
+
+  .image-div_PillField {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 100%;
+    overflow: hidden;
   }
