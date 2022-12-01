@@ -10,6 +10,8 @@ function SmallCard(props) {
     total, percentBalance, totalTitle,
   } = props;
 
+  const percentBalanceSignal = percentBalance[0];
+
   return (
     <div
       className="container-div_smallcard"
@@ -21,7 +23,14 @@ function SmallCard(props) {
       <h2>{`R$ ${total}`}</h2>
       <h3>{`R$ ${totalTitle}`}</h3>
 
-      <p>{`${percentBalance}%`}</p>
+      <p
+        style={{
+          color: percentBalanceSignal === '-' ? '#CD0505' : '#05CD99',
+        }}
+      >
+        {`${percentBalance}%`}
+
+      </p>
     </div>
   );
 }

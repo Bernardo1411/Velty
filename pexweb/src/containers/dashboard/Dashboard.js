@@ -1,5 +1,9 @@
-import React from 'react';
+// eslint-disable-file no-use-before-define
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Dashboard.css';
+
+import getFinanceDataAction from '../../store/Actions/financeAction';
 
 import PillField from '../../components/molecules/pillField/PillField';
 import Input from '../../components/atoms/inputs/Input';
@@ -12,6 +16,19 @@ import { ReactComponent as MoonSVG } from '../../assets/images/moon.svg';
 import { ReactComponent as InfoSVG } from '../../assets/images/info.svg';
 
 function Dashboard() {
+  const financeData = useSelector((state) => state.finance.financeData);
+  const dispatch = useDispatch();
+
+  const [financeState, setFinanceState] = useState({});
+
+  useEffect(() => {
+    setFinanceState(financeData);
+  }, [financeData]);
+
+  useEffect(() => {
+    dispatch(getFinanceDataAction());
+  }, []);
+
   return (
     <div className="container-div_dashboard">
       <div className="header-div_dashboard">
@@ -73,77 +90,47 @@ function Dashboard() {
       <div className="body-div_dashboard">
         <div>
           <CardColor
-            total="312.321,00"
+            total={financeState.receitaTotal}
             totalTitle="Receita Total"
-            average="67,20"
+            average={financeState.receitaTotalAvg}
             color="colorRed"
           />
           <CardColor
-            total="74.421,00"
+            total={financeState.lucroTotal}
             totalTitle="Lucro Total"
-            average="42,30"
+            average={financeState.lucroTotalAvg}
             color="colorBlue"
           />
           <CardColor
-            total="3,12"
+            total={financeState.lucroVenda}
             totalTitle="Lucro por venda"
-            average="12,40"
+            average={financeState.lucroVendaAvg}
             color="colorGreen"
           />
         </div>
         <div>
-          <VerySmallCard
-            total="3.312"
-            totalTitle="Clientes ativos"
-            percentBalance="+15,3% (+223)"
-          />
-          <VerySmallCard
-            total="3.312"
-            totalTitle="Novos clientes"
-            percentBalance="+15,3% (+223)"
-          />
-          <VerySmallCard
-            total="3.312"
-            totalTitle="Clientes adicionados"
-            percentBalance="+15,3% (+223)"
-          />
-          <VerySmallCard
-            total="3.312"
-            totalTitle="LTV"
-            percentBalance="+15,3% (+223)"
-          />
-          <VerySmallCard
-            total="3.312"
-            totalTitle="Turnover"
-            percentBalance="+15,3% (+223)"
-          />
-          <VerySmallCard
-            total="3.312"
-            totalTitle="Turnover recuperado"
-            percentBalance="+15,3% (+223)"
-          />
+          {
+            financeState.clientes && financeState.clientes.map((cliente) => (
+              <VerySmallCard
+                key={cliente.totalTitle}
+                total={cliente.value}
+                totalTitle={cliente.totalTitle}
+                percentBalance={cliente.percentVar}
+              />
+            ))
+}
         </div>
         <div>
-          <SmallCard
-            total="321.321"
-            totalTitle="Cotações realizadas"
-            percentBalance="+15,3% (+223)"
-          />
-          <SmallCard
-            total="321.321"
-            totalTitle="Vendas finalizadas"
-            percentBalance="+15,3% (+223)"
-          />
-          <SmallCard
-            total="321.321"
-            totalTitle="Cotações concluídas"
-            percentBalance="+15,3% (+223)"
-          />
-          <SmallCard
-            total="321.321"
-            totalTitle="Cotações não respondidas"
-            percentBalance="+15,3% (+223)"
-          />
+          {
+            financeState.cotas && financeState.cotas.map((cota) => (
+              <SmallCard
+                key={cota.totalTitle}
+                total={cota.value}
+                totalTitle={cota.totalTitle}
+                percentBalance={cota.percentVar}
+              />
+            ))
+}
         </div>
         <div>
           <WhiteCard

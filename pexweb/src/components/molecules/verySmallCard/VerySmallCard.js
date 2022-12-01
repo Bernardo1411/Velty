@@ -8,14 +8,22 @@ function VerySmallCard(props) {
     total, percentBalance, totalTitle,
   } = props;
 
+  const percentBalanceSignal = percentBalance[0];
+
   return (
     <div
       className="container-div_verysmallcard"
     >
-      <h3>{`R$ ${totalTitle}`}</h3>
-      <h2>{`R$ ${total}`}</h2>
+      <h3>{`${totalTitle}`}</h3>
+      <h2>{`${total}`}</h2>
 
-      <p>{`${percentBalance}%`}</p>
+      <p style={{
+        color: percentBalanceSignal === '-' ? '#CD0505' : '#05CD99',
+      }}
+      >
+        {`${percentBalance}%`}
+
+      </p>
     </div>
   );
 }
