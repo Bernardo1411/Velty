@@ -1,4 +1,3 @@
-// eslint-disable-file no-use-before-define
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './Dashboard.css';
@@ -14,22 +13,32 @@ import VerySmallCard from '../../components/molecules/verySmallCard/VerySmallCar
 import { ReactComponent as BellSVG } from '../../assets/images/bell.svg';
 import { ReactComponent as MoonSVG } from '../../assets/images/moon.svg';
 import { ReactComponent as InfoSVG } from '../../assets/images/info.svg';
+import Loader from '../../components/atoms/loader/Loader';
 
 function Dashboard() {
   const financeData = useSelector((state) => state.finance.financeData);
+  const loadingData = useSelector((state) => state.finance.loadingData);
   const dispatch = useDispatch();
 
   const [financeState, setFinanceState] = useState({});
+  const [searchState, setSearchState] = useState('');
+  const [loadingState, setLoadingState] = useState('');
 
   useEffect(() => {
     setFinanceState(financeData);
   }, [financeData]);
 
   useEffect(() => {
+    setLoadingState(loadingData);
+  }, [loadingData]);
+
+  useEffect(() => {
     dispatch(getFinanceDataAction());
   }, []);
 
-  return (
+  let content;
+
+  content = (
     <div className="container-div_dashboard">
       <div className="header-div_dashboard">
         <div className="leftHeader-div_dashboard">
@@ -62,6 +71,7 @@ function Dashboard() {
             <Input
               image="search"
               placeholder="Busca"
+              onChange={(value) => setSearchState(value)}
             />
             <BellSVG
               width="15px"
@@ -89,28 +99,26 @@ function Dashboard() {
       </div>
       <div className="body-div_dashboard">
         <div>
-          <CardColor
-            total={financeState.receitaTotal}
-            totalTitle="Receita Total"
-            average={financeState.receitaTotalAvg}
-            color="colorRed"
-          />
-          <CardColor
-            total={financeState.lucroTotal}
-            totalTitle="Lucro Total"
-            average={financeState.lucroTotalAvg}
-            color="colorBlue"
-          />
-          <CardColor
-            total={financeState.lucroVenda}
-            totalTitle="Lucro por venda"
-            average={financeState.lucroVendaAvg}
-            color="colorGreen"
-          />
+          {
+            financeState.receita && financeState.receita.filter((receita) => {
+              if (searchState === '') return true;
+              return receita.totalTitle.toLowerCase().includes(searchState.toLowerCase());
+            }).map((receita) => (
+              <CardColor
+                total={receita.value}
+                totalTitle={receita.totalTitle}
+                average={receita.avg}
+                color={receita.color}
+              />
+            ))
+}
         </div>
         <div>
           {
-            financeState.clientes && financeState.clientes.map((cliente) => (
+            financeState.clientes && financeState.clientes.filter((cliente) => {
+              if (searchState === '') return true;
+              return cliente.totalTitle.toLowerCase().includes(searchState.toLowerCase());
+            }).map((cliente) => (
               <VerySmallCard
                 key={cliente.totalTitle}
                 total={cliente.value}
@@ -122,7 +130,10 @@ function Dashboard() {
         </div>
         <div>
           {
-            financeState.cotas && financeState.cotas.map((cota) => (
+            financeState.cotas && financeState.cotas.filter((cota) => {
+              if (searchState === '') return true;
+              return cota.totalTitle.toLowerCase().includes(searchState.toLowerCase());
+            }).map((cota) => (
               <SmallCard
                 key={cota.totalTitle}
                 total={cota.value}
@@ -215,6 +226,10 @@ function Dashboard() {
       </div>
     </div>
   );
+
+  if (loadingState) content = <Loader />;
+
+  return content;
 }
 
 export default Dashboard;

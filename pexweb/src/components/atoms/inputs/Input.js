@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import './Input.css';
 
 function Input(props) {
-  const { image, type, placeholder } = props;
+  const {
+    image, type, placeholder, onChange,
+  } = props;
 
   const [typeState, setTypeState] = useState('text');
 
@@ -31,6 +33,7 @@ function Input(props) {
           className="input-input_input"
           type={type}
           placeholder={placeholder}
+          onChange={(event) => onChange(event.target.value)}
         />
       )
       }
@@ -40,12 +43,14 @@ function Input(props) {
 
 Input.defaultProps = {
   type: 'text',
+  onChange: () => {},
 };
 
 Input.propTypes = {
   image: PropTypes.string.isRequired,
   type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
 };
 
 export default Input;

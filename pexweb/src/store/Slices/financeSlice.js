@@ -4,30 +4,44 @@ export const financeSlice = createSlice({
   name: 'data',
   initialState: {
     financeData: {
-      receitaTotal: 0,
-      receitaTotalAvg: 0,
-      lucroTotal: 0,
-      lucroTotalAvg: 0,
-      lucroVenda: 0,
-      lucroVendaAvg: 0,
+      receita: [
+        {
+          value: '0',
+          avg: '0',
+          totalTitle: 'Receita Total',
+          color: 'colorRed',
+        },
+        {
+          value: '0',
+          avg: '0',
+          totalTitle: 'Lucro Total',
+          color: 'colorBlue',
+        },
+        {
+          value: '0',
+          avg: '0',
+          totalTitle: 'Lucro por venda',
+          color: 'colorGreen',
+        },
+      ],
       clientes: [
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Clientes ativos',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Novos Clientes',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Clientes adicionados',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'LTV',
         },
@@ -44,22 +58,22 @@ export const financeSlice = createSlice({
       ],
       cotas: [
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Cotações realizadas',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Vendas finalizadas',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Cotações concluídas',
         },
         {
-          value: 0,
+          value: '0',
           percentVar: '',
           totalTitle: 'Cotações não respondidas',
         },

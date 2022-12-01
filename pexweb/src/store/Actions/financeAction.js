@@ -8,16 +8,26 @@ export default function getFinanceDataAction() {
       const data = await new Promise((resolve) => {
         setTimeout(() => {
           resolve({
-            receitaTotal: '312.321,00',
-            receitaTotalAvg: '67,20',
-            lucroTotal: '74.421,00',
-            lucroTotalAvg: '42,30',
-            lucroVenda: '3,12',
-            lucroVendaAvg: '12,40',
-            clienteAtivos: {
-              value: '3,312',
-              percentVar: '+2,6% (+12)',
-            },
+            receita: [
+              {
+                value: '312.321,00',
+                avg: '67,20',
+                totalTitle: 'Receita Total',
+                color: 'colorRed',
+              },
+              {
+                value: '74.421,00',
+                avg: '42,30',
+                totalTitle: 'Lucro Total',
+                color: 'colorBlue',
+              },
+              {
+                value: '3,12',
+                avg: '12,40',
+                totalTitle: 'Lucro por venda',
+                color: 'colorGreen',
+              },
+            ],
             clientes: [
               {
                 value: '12',
