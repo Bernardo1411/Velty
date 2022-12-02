@@ -1,17 +1,22 @@
 import React from 'react';
 import {
-  StatusBar, StyleSheet, View, Text,
+  StatusBar, StyleSheet, View,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
+import normalize from '../utils/normalize';
+
 import PexLogoSVG from '../../assets/images/pexlogo.svg';
 import BackgroundSVG from '../../assets/images/background.svg';
-import ArrowLeftSVG from '../../assets/images/arrowleft.svg';
+import ArrowRightSVG from '../../assets/images/arrowright.svg';
 import RoundButton from '../components/atoms/RoundButton';
+import Title from '../components/atoms/Title';
+import AppText from '../components/atoms/Text';
 
 const styles = StyleSheet.create({
   sectionContainer: {
     flex: 1,
+    width: normalize(375),
     paddingHorizontal: 24,
     backgroundColor: '#F8F8F8',
     display: 'flex',
@@ -37,32 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: '40%',
-    width: '100%',
-  },
-  tileText: {
-    fontStyle: 'normal',
-    fontWeight: '500',
-    fontSize: 32,
-    color: '#000000',
-    lineHeight: 41,
-    marginBottom: 16,
-    width: '83%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  desciptText: {
-    fontStyle: 'normal',
-    fontWeight: '400',
-    fontSize: 14,
-    textAlign: 'center',
-    color: '#999999',
-    width: '83%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: '85%',
   },
   buttonContainer: {
     display: 'flex',
@@ -92,20 +72,20 @@ function LandingScreen(props) {
         <PexLogoSVG width={224} height={121} />
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.tileText}>Bem vindo a PEX</Text>
-        <Text style={styles.desciptText}>
+        <Title>Bem vindo a PEX</Title>
+        <AppText style={styles.desciptText}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Etiam eget ligula eu lectus lobortis condimentum.
           Aliquam nonummy auctor massa.
-        </Text>
+        </AppText>
       </View>
       <View style={styles.buttonContainer}>
         <RoundButton
           onPress={() => navigation.navigate('Login')}
         >
-          <ArrowLeftSVG
-            width={24}
-            height={24}
+          <ArrowRightSVG
+            width={normalize(24)}
+            height={normalize(24)}
           />
         </RoundButton>
       </View>
