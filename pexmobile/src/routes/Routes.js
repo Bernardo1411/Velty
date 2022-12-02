@@ -17,7 +17,6 @@ function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        // initialRouteName="LandingScreen"
         initialRouteName="LandingScreen"
       >
         <Stack.Screen

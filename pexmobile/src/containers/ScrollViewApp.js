@@ -21,15 +21,18 @@ function ScrollViewApp(props) {
     children, showsVerticalScrollIndicator,
     flexDirection,
     horizontal,
+    flexGrow,
   } = props;
   return (
     <ScrollView
       style={[styles.sectionContainerScroll, {
         flexDirection,
+        flexGrow,
       }]}
       contentContainerStyle={styles.contentContainerScroll}
       showsVerticalScrollIndicator={showsVerticalScrollIndicator}
       horizontal={horizontal}
+      showsHorizontalScrollIndicator={false}
     >
       {children}
     </ScrollView>
@@ -40,6 +43,7 @@ ScrollViewApp.defaultProps = {
   showsVerticalScrollIndicator: false,
   flexDirection: 'column',
   horizontal: false,
+  flexGrow: 1,
 };
 
 ScrollViewApp.propTypes = {
@@ -47,6 +51,7 @@ ScrollViewApp.propTypes = {
   showsVerticalScrollIndicator: PropTypes.bool,
   flexDirection: PropTypes.string,
   horizontal: PropTypes.bool,
+  flexGrow: PropTypes.number,
 };
 
 export default ScrollViewApp;

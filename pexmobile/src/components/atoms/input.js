@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: '100%',
     marginLeft: normalize(10),
+    color: '#000',
   },
   inputText: {
     fontStyle: 'normal',

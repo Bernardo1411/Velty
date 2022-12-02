@@ -185,6 +185,7 @@ function Home(props) {
               color="#fff"
               fontWeight="500"
               fontSize={24}
+              fontStyle="italic"
             >
               Tudo com Frete grátis
             </AppText>
