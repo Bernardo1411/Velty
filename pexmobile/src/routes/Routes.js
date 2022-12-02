@@ -18,7 +18,7 @@ function Routes() {
     <NavigationContainer>
       <Stack.Navigator
         // initialRouteName="LandingScreen"
-        initialRouteName="FaceId"
+        initialRouteName="LandingScreen"
       >
         <Stack.Screen
           name="LandingScreen"
