@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    fontFamily: 'PlusJakartaSans-Regular',
   },
 });
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View, StatusBar, StyleSheet,
 } from 'react-native';
-import PropTypes from 'prop-types';
 
 import normalize from '../utils/normalize';
 
@@ -47,9 +46,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function Feedback(props) {
-  const { navigation } = props;
-
+function Feedback() {
   return (
     <View style={styles.sectionContainer}>
       <StatusBar
@@ -59,7 +56,7 @@ function Feedback(props) {
       <View style={styles.buttonsView}>
         <Button
           width={normalize(151)}
-          onPress={() => navigation.navigate('')}
+          onPress={() => {}}
         >
           Recebidos
         </Button>
@@ -67,7 +64,7 @@ function Feedback(props) {
           backgroundColor="white"
           color="black"
           width={normalize(151)}
-          onPress={() => navigation.navigate('')}
+          onPress={() => {}}
         >
           Aguardando
         </Button>
@@ -101,11 +98,5 @@ function Feedback(props) {
     </View>
   );
 }
-
-Feedback.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
-};
 
 export default Feedback;
