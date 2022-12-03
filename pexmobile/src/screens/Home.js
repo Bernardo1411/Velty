@@ -165,6 +165,7 @@ function Home(props) {
           />
           <View style={styles.hearderLeftContainer}>
             <CartSVG
+              onPress={() => navigation.navigate('Cart')}
               width={normalize(24)}
               height={normalize(24)}
             />
@@ -193,6 +194,7 @@ function Home(props) {
               color="#fff"
               fontWeight="500"
               fontSize={14}
+              onPress={() => navigation.navigate('Checkout')}
             >
               Comprar agora
             </AppText>

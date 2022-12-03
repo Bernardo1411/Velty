@@ -33,6 +33,7 @@ function AppText(props) {
     justifyContent,
     alignItems,
     marginBottom,
+    onPress,
   } = props;
 
   return (
@@ -51,6 +52,7 @@ function AppText(props) {
           marginBottom,
         },
       ]}
+      onPress={onPress}
     >
       {children}
     </Text>
@@ -67,6 +69,7 @@ AppText.defaultProps = {
   justifyContent: 'center',
   alignItems: 'center',
   marginBottom: 0,
+  onPress: () => {},
 };
 
 AppText.propTypes = {
@@ -80,6 +83,7 @@ AppText.propTypes = {
   justifyContent: PropTypes.string,
   alignItems: PropTypes.string,
   marginBottom: PropTypes.number,
+  onPress: PropTypes.func,
 };
 
 export default AppText;

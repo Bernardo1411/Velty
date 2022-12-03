@@ -10,6 +10,9 @@ import SignUpFinal from '../screens/SignUpFinal';
 import FaceId from '../screens/FaceId';
 import Home from '../screens/Home';
 import ProductPage from '../screens/ProductPage';
+import Cart from '../screens/Cart';
+import Checkout from '../screens/Checkout';
+import Feedback from '../screens/Feedback';
 
 const Stack = createStackNavigator();
 
@@ -70,6 +73,51 @@ function Routes() {
           options={
             {
               title: '',
+              headerShown: true,
+              headerStyle: {
+                backgroundColor: '#fff',
+                shadowColor: 'transparent',
+              },
+              headerTintColor: '#000',
+            }
+        }
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={
+            {
+              title: 'Carrinho',
+              headerShown: true,
+              headerStyle: {
+                backgroundColor: '#fff',
+                shadowColor: 'transparent',
+              },
+              headerTintColor: '#000',
+            }
+        }
+        />
+        <Stack.Screen
+          name="Checkout"
+          component={Checkout}
+          options={
+            {
+              title: 'Compra',
+              headerShown: true,
+              headerStyle: {
+                backgroundColor: '#fff',
+                shadowColor: 'transparent',
+              },
+              headerTintColor: '#000',
+            }
+        }
+        />
+        <Stack.Screen
+          name="Feedback"
+          component={Feedback}
+          options={
+            {
+              title: 'Compras',
               headerShown: true,
               headerStyle: {
                 backgroundColor: '#fff',
