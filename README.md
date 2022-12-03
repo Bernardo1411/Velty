@@ -102,8 +102,7 @@ https://drive.google.com/file/d/1V3A3ZIUXrwRhmQLhLnb0b6Xw-ej56ohU/view?usp=share
 
 #### Isso é possível a métodos contendo regex
 
-<img src="./images/emailcheck.gif" alt="Checagem email" width="200"/>
-<img src="./images/passwordcheck.gif" alt="Checagem senha" width="200"/>
+<img src="./images/emailcheck.gif" alt="Checagem email" width="200"/> <img src="./images/passwordcheck.gif" alt="Checagem senha" width="200"/>
 
 <br />
 
@@ -117,19 +116,13 @@ https://drive.google.com/file/d/1V3A3ZIUXrwRhmQLhLnb0b6Xw-ej56ohU/view?usp=share
 
 ### Fluxo para criação de conta
 
-<img src="./images/criarconta.gif" alt="Fluxo para criação de conta" width="200"/>
-
-<img src="./images/faceid.png" alt="Fluxo para criação de conta" width="200"/>
+<img src="./images/criarconta.gif" alt="Fluxo para criação de conta" width="200"/> <img src="./images/faceid.png" alt="Fluxo para criação de conta" width="200"/>
 
 <br />
 
 ### Acesso do usuário
 
-<img src="./images/home.gif" alt="home" width="200"/>
-<img src="./images/cart.png" alt="cart" width="200"/>
-<img src="./images/product.gif" alt="Tela do Produto" width="200"/>
-<img src="./images/finish.gif" alt="Fluxo do usuário" width="200"/>
-<img src="./images/homepresenting.gif" alt="home" width="200"/>
+<img src="./images/home.gif" alt="home" width="200"/> <img src="./images/cart.png" alt="cart" width="200"/> <img src="./images/product.gif" alt="Tela do Produto" width="200"/> <img src="./images/finish.gif" alt="Fluxo do usuário" width="200"/> <img src="./images/homepresenting.gif" alt="home" width="200"/>
 
 <br />
 
