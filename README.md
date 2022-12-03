@@ -4,7 +4,12 @@
 
 <br />
 
+## Projeto Web
+
+<br />
+
 ### Link para o site:
+
 https://velty-bernardo.surge.sh/
 
 <br />
@@ -39,8 +44,7 @@ https://velty-bernardo.surge.sh/
 
 #### A fake api é um timeout que retorna uma promise e após 2 segundos retorna os dados a serem inseridos no gerenciador global de estados.
 
-
-````
+```
 try {
       const data = await new Promise((resolve) => {
         setTimeout(() => {
@@ -58,7 +62,7 @@ try {
     } catch (err) {
       // ...
     }
-````
+```
 
 <br />
 
@@ -70,4 +74,70 @@ try {
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+
+</br>
+
+<br />
+
+## Projeto Mobile
+
+<br />
+
+### Link para download do .apk:
+
+https://drive.google.com/file/d/1V3A3ZIUXrwRhmQLhLnb0b6Xw-ej56ohU/view?usp=share_link
+
+<br />
+
+## Apresentação do projeto mobile
+
+### Tela inicial
+
+![Tela inicial](/images/landing.png "Tela inicial")
+
+<br />
+
+### Validação de e-mail e senha
+
+#### Isso é possível a métodos contendo regex
+
+![Checagem email](/images/emailcheck.gif "Checagem email")
+![Checagem senha](/images/passwordcheck.gif "Checagem senha")
+
+<br />
+
+### Também é possível fazer a formatação do input
+
+#### Isso é possível a métodos contendo regex
+
+![Formatação do input](/images/formater.gif "Formatação do input")
+
+<br />
+
+### Fluxo para criação de conta
+
+![Fluxo para criação de conta](/images/criarconta.gif "Fluxo para criação de conta")
+![Fluxo para criação de conta](/images/faceid.png "Fluxo para criação de conta")
+
+<br />
+
+<br />
+
+### Acesso do usuário
+
+![home](/images/home.gif "Responsividade")
+![home](/images/cart.png "Responsividade")
+![Tela do Produto](/images/product.gif "Tela do Produto")
+![Fluxo do usuário](/images/finish.gif "Fluxo do usuário")
+![home](/images/homepresenting.gif "home")
+
+<br />
+
+### Para o desenvolvimento do projeto foram utilizadas as seguintes tecnologias:
+
+<br/>
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
